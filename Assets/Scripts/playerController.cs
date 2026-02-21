@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     public Vector2 targetVel;
     public Vector2 velDiff;
     public float accel;
+
+    public string wish1;
+    public string wish2;
+    public string wish3;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
