@@ -1,10 +1,17 @@
 fileFormatVersion: 2
-guid: 36e5a914740ef1149abc550efd777e01
+guid: c6114b73a6689b648b10af519a6f0e45
+AssetOrigin:
+  serializedVersion: 1
+  productId: 332078
+  packageName: BoldPixels
+  packageVersion: 1.5.0
+  assetPath: Assets/BoldPixels/Assets/font/boldpixelsx1.png
+  uploadId: 785910
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4777861783574383369
-    second: street_0
+      213: -165668901869427220
+    second: boldpixelsx1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +103,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: street_0
+      name: boldpixelsx1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 128
+        width: 145
+        height: 1565
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +135,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90b8ddb5aff5e4240800000000000000
-      internalID: 4777861783574383369
+      spriteID: ce56eb1f20d63bdf0800000000000000
+      internalID: -165668901869427220
       vertices: []
       indices: 
       edges: []
@@ -135,7 +155,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      street_0: 4777861783574383369
+      boldpixelsx1_0: -165668901869427220
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

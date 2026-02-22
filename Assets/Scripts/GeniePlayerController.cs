@@ -12,9 +12,6 @@ public class GeniePlayerController : MonoBehaviour
     public Vector2 velDiff;
     public float accel;
 
-    public string wish1;
-    public string wish2;
-    public string wish3;
     public bool allowMovement = true;
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
