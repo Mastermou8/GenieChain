@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class GenieSystem : MonoBehaviour
@@ -7,7 +8,7 @@ public class GenieSystem : MonoBehaviour
     [SerializeField] private GeniePlayerController playerController;
     [SerializeField] private WishHandler wishHandler;
     [TextArea]
-    [SerializeField] private string message = "Hello, how are you? | I am a cute NPC named Dawson.";
+    [SerializeField] public string message = "Hello, I am a magical Genie! | I will give you three wishes! | Please, tell me what you wish.";
 
     [Header("Individual Wishes")]
     [SerializeField] private string WorldPeace;
@@ -156,15 +157,13 @@ public class GenieSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (!EnsureWishCarrier())
         {
             return;
         }
 
-        if(wishCarrier.readyToLeave == true)
-        {
-            message = "Go, enjoy your wish | Come back later for your next.";
-        }
 
 
 
@@ -183,29 +182,41 @@ public class GenieSystem : MonoBehaviour
             string dialogueKey = GetDialogueKey();
             string dialogue = GetDialogue(dialogueKey);
 
-            if (dialogue != null)
+            if (wishCarrier.readyToLeave == true)
             {
+                message = "Go, enjoy your wish | Come back later for your next.";
+                dialogManager.ShowMessage(message);
+            }
 
-                Debug.Log("Detected there is a diologue");
-                if(wishCarrier.returning == true)
+            if (wishCarrier.readyToLeave == false)
+            {
+                if (dialogue != null)
+                {
+
+                    Debug.Log("Detected there is a diologue");
+                    if (wishCarrier.returning == true)
+                    {
+                        dialogManager.releasePlayer = false;
+                        dialogManager.ShowMessage(dialogue);
+
+                        //stops character while talking
+                        playerController.currentVel.x = 0;
+                        playerController.currentVel.y = 0;
+                    }
+                }
+                else
                 {
                     dialogManager.releasePlayer = false;
-                    dialogManager.ShowMessage(dialogue);
+                    dialogManager.ShowMessage(message);
 
                     //stops character while talking
                     playerController.currentVel.x = 0;
                     playerController.currentVel.y = 0;
                 }
             }
-            else
-            {
-                dialogManager.releasePlayer = false;
-                dialogManager.ShowMessage(message);
 
-                //stops character while talking
-                playerController.currentVel.x = 0;
-                playerController.currentVel.y = 0;
-            }
+
+            
         }
 
 
