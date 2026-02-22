@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WishCarrier : MonoBehaviour
 {
+    public static WishCarrier Instance { get; private set; }
 
     public string wish1;
     public string wish2;
@@ -74,6 +75,13 @@ public class WishCarrier : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
 }

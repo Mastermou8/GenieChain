@@ -14,10 +14,80 @@ public class WishHandler : MonoBehaviour
     public GameObject accomplished;
     public WishCarrier wishCarrier;
 
+    private bool EnsureWishCarrier()
+    {
+        if (wishCarrier == null)
+        {
+            wishCarrier = WishCarrier.Instance;
+        }
+
+        if (wishCarrier == null)
+        {
+            wishCarrier = FindObjectOfType<WishCarrier>();
+        }
+
+        if (wishCarrier == null)
+        {
+            Debug.LogWarning("WishHandler could not find WishCarrier.");
+            return false;
+        }
+
+        return true;
+    }
+
+    private bool HasWish(string wish)
+    {
+        return wishCarrier.wish1 == wish || wishCarrier.wish2 == wish || wishCarrier.wish3 == wish;
+    }
+
+    private void RefreshWishButtons()
+    {
+        if (!EnsureWishCarrier())
+        {
+            return;
+        }
+
+        if (money != null)
+        {
+            money.SetActive(!HasWish("Money"));
+        }
+
+        if (relationship != null)
+        {
+            relationship.SetActive(!HasWish("Relationships"));
+        }
+
+        if (morewishes != null)
+        {
+            morewishes.SetActive(!HasWish("MoreWishes"));
+        }
+
+        if (immortal != null)
+        {
+            immortal.SetActive(!HasWish("Immortality"));
+        }
+
+        if (accomplished != null)
+        {
+            accomplished.SetActive(!HasWish("Accomplished"));
+        }
+
+        if (worldpeace != null)
+        {
+            worldpeace.SetActive(!HasWish("WorldPeace"));
+        }
+
+        if (nothing != null)
+        {
+            nothing.SetActive(!HasWish("Nothing"));
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        EnsureWishCarrier();
+        RefreshWishButtons();
     }
 
     // Update is called once per frame
@@ -28,6 +98,11 @@ public class WishHandler : MonoBehaviour
 
     public void Money()
     {
+        if (!EnsureWishCarrier())
+        {
+            return;
+        }
+
         Debug.Log("Money picked!");
 
         if(wishCarrier.askedWish1 == false)
@@ -49,11 +124,17 @@ public class WishHandler : MonoBehaviour
         wishBox.SetActive(false);
         wishCarrier.readyToLeave = true;
         dialogManager.releasePlayer = true;
+        RefreshWishButtons();
         
     }
 
     public void Relationship()
     {
+        if (!EnsureWishCarrier())
+        {
+            return;
+        }
+
         Debug.Log("Relationships picked!");
 
         if (wishCarrier.askedWish1 == false)
@@ -75,10 +156,16 @@ public class WishHandler : MonoBehaviour
         wishBox.SetActive(false);
         wishCarrier.readyToLeave = true;
         dialogManager.releasePlayer = true;
+        RefreshWishButtons();
     }
 
     public void WorldPeace()
     {
+        if (!EnsureWishCarrier())
+        {
+            return;
+        }
+
         Debug.Log("WorldPeace Picked");
 
         if (wishCarrier.askedWish1 == false)
@@ -100,10 +187,16 @@ public class WishHandler : MonoBehaviour
         wishBox.SetActive(false);
         wishCarrier.readyToLeave = true;
         dialogManager.releasePlayer = true;
+        RefreshWishButtons();
     }
 
     public void MoreWishes()
     {
+        if (!EnsureWishCarrier())
+        {
+            return;
+        }
+
         Debug.Log("More Wishes picked!");
 
         if (wishCarrier.askedWish1 == false)
@@ -125,10 +218,16 @@ public class WishHandler : MonoBehaviour
         wishBox.SetActive(false);
         wishCarrier.readyToLeave = true;
         dialogManager.releasePlayer = true;
+        RefreshWishButtons();
     }
 
     public void Accomplished()
     {
+        if (!EnsureWishCarrier())
+        {
+            return;
+        }
+
         Debug.Log("Accomplished picked!");
 
         if (wishCarrier.askedWish1 == false)
@@ -150,11 +249,17 @@ public class WishHandler : MonoBehaviour
         wishBox.SetActive(false);
         wishCarrier.readyToLeave = true;
         dialogManager.releasePlayer = true;
+        RefreshWishButtons();
     }
 
     
     public void Immortality()
     {
+        if (!EnsureWishCarrier())
+        {
+            return;
+        }
+
         Debug.Log("Immortality picked!");
 
         if (wishCarrier.askedWish1 == false)
@@ -176,10 +281,16 @@ public class WishHandler : MonoBehaviour
         wishBox.SetActive(false);
         wishCarrier.readyToLeave = true;
         dialogManager.releasePlayer = true;
+        RefreshWishButtons();
     }
 
     public void Nothing()
     {
+        if (!EnsureWishCarrier())
+        {
+            return;
+        }
+
         Debug.Log("Nothing picked!");
 
         if (wishCarrier.askedWish1 == false)
@@ -201,5 +312,6 @@ public class WishHandler : MonoBehaviour
         wishBox.SetActive(false);
         wishCarrier.readyToLeave = true;
         dialogManager.releasePlayer = true;
+        RefreshWishButtons();
     }
 }

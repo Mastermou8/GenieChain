@@ -64,7 +64,22 @@ public class GenieSystem : MonoBehaviour
 
     public GameObject InteractionPrompt;
     public string npcName;
-    public WishCarrier wishCarrier;
+    [SerializeField] private WishCarrier wishCarrier;
+
+    private bool EnsureWishCarrier()
+    {
+        if (wishCarrier == null)
+        {
+            wishCarrier = WishCarrier.Instance;
+        }
+
+        if (wishCarrier == null)
+        {
+            wishCarrier = FindObjectOfType<WishCarrier>();
+        }
+
+        return wishCarrier != null;
+    }
 
     void Awake()
     {
@@ -81,6 +96,7 @@ public class GenieSystem : MonoBehaviour
         {
             wishHandler = FindObjectOfType<WishHandler>();
         }
+        EnsureWishCarrier();
         InitializeDialogueMap();
     }
 
@@ -140,6 +156,10 @@ public class GenieSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!EnsureWishCarrier())
+        {
+            return;
+        }
 
         if(wishCarrier.readyToLeave == true)
         {

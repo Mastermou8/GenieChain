@@ -16,6 +16,27 @@ public class GenieDialogManager : MonoBehaviour
     string[] messages;
     int messagesIndex = 0;
     bool isActive = false;
+
+    private bool EnsureWishCarrier()
+    {
+        if (wishCarrier == null)
+        {
+            wishCarrier = WishCarrier.Instance;
+        }
+
+        if (wishCarrier == null)
+        {
+            wishCarrier = FindObjectOfType<WishCarrier>();
+        }
+
+        return wishCarrier != null;
+    }
+
+    private void Awake()
+    {
+        EnsureWishCarrier();
+    }
+
     // Update is called once per frame
     public void ShowMessage(string Message)
     {
@@ -36,8 +57,8 @@ public class GenieDialogManager : MonoBehaviour
             DialogSystem.SetActive(false);
             messagesIndex = 0;
             firstMessagePlayed = true;
-           
-            if (wishCarrier.readyToLeave == false)
+
+            if (!EnsureWishCarrier() || wishCarrier.readyToLeave == false)
             {
                 wishBox.SetActive(true);
                 Debug.Log("turned on wishbox");
@@ -65,7 +86,7 @@ public class GenieDialogManager : MonoBehaviour
             messagesIndex = 0;
             isActive = false;
             firstMessagePlayed = true;
-            if (wishCarrier.readyToLeave == false)
+            if (!EnsureWishCarrier() || wishCarrier.readyToLeave == false)
             {
                 wishBox.SetActive(true);
                 Debug.Log("turned on wishbox");
