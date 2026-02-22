@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,7 +20,10 @@ public class PlayerController : MonoBehaviour
     public string wish3;
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private int style;
 
+    
+ 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -66,6 +70,15 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
         }
+
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            style = (style + 1) % 4 ;
+            
+        }
+        animator.SetInteger("Style", style);
+       
 
         /* for reference from last project:
         previousVelocity = rb.linearVelocity;
