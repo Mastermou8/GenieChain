@@ -5,13 +5,13 @@ public class WishHandler : MonoBehaviour
 {
     public GameObject wishBox;
     public GenieDialogManager dialogManager;
-    public bool money;
-    public bool relationship;
-    public bool morewishes;
-    public bool immortal;
-    public bool nothing;
-    public bool worldpeace;
-    public bool accomplished;
+    public GameObject money;
+    public GameObject relationship;
+    public GameObject morewishes;
+    public GameObject immortal;
+    public GameObject nothing;
+    public GameObject worldpeace;
+    public GameObject accomplished;
     public WishCarrier wishCarrier;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,6 +32,9 @@ public class WishHandler : MonoBehaviour
         wishCarrier.wish1 = "Money";
         wishCarrier.askedWish1 = true;
         wishBox.SetActive(false);
+        wishCarrier.readyToLeave = true;
+        dialogManager.releasePlayer = true;
+        
     }
 
     public void Relationship()
@@ -40,6 +43,8 @@ public class WishHandler : MonoBehaviour
         wishCarrier.wish1 = "Relationships";
         wishCarrier.askedWish1 = true;
         wishBox.SetActive(false);
+        wishCarrier.readyToLeave = true;
+        dialogManager.releasePlayer = true;
     }
 
     public void WorldPeace()
@@ -48,6 +53,8 @@ public class WishHandler : MonoBehaviour
         wishCarrier.wish1 = "WorldPeace";
         wishCarrier.askedWish1 = true;
         wishBox.SetActive(false);
+        wishCarrier.readyToLeave = true;
+        dialogManager.releasePlayer = true;
     }
 
     public void MoreWishes()
@@ -56,6 +63,8 @@ public class WishHandler : MonoBehaviour
         wishCarrier.wish1 = "MoreWishes";
         wishCarrier.askedWish1 = true;
         wishBox.SetActive(false);
+        wishCarrier.readyToLeave = true;
+        dialogManager.releasePlayer = true;
     }
 
     public void Accomplished()
@@ -64,6 +73,8 @@ public class WishHandler : MonoBehaviour
         wishCarrier.wish1 = "Accomplished";
         wishCarrier.askedWish1 = true;
         wishBox.SetActive(false);
+        wishCarrier.readyToLeave = true;
+        dialogManager.releasePlayer = true;
     }
 
     
@@ -73,6 +84,8 @@ public class WishHandler : MonoBehaviour
         wishCarrier.wish1 = "Immortality";
         wishCarrier.askedWish1 = true;
         wishBox.SetActive(false);
+        wishCarrier.readyToLeave = true;
+        dialogManager.releasePlayer = true;
     }
 
     public void Nothing()
@@ -81,5 +94,7 @@ public class WishHandler : MonoBehaviour
         wishCarrier.wish1 = "Nothing";
         wishCarrier.askedWish1 = true;
         wishBox.SetActive(false);
+        wishCarrier.readyToLeave = true;
+        dialogManager.releasePlayer = true;
     }
 }
