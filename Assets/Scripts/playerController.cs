@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         flipSprite();
         //Collect input
@@ -66,11 +66,16 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
         }
-       
+
         /* for reference from last project:
         previousVelocity = rb.linearVelocity;
         rb.linearVelocity = ((((direction * movementSpeed)) + previousVelocity) / 2);
         */
+        if (moveInput == Vector2.zero)
+        {
+            currentVel.x = 0;
+            currentVel.y = 0;
+        }
 
     }
 }
