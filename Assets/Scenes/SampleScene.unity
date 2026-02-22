@@ -1947,7 +1947,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 693500373}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 434163890}
+        m_TargetAssemblyTypeName: WishHandler, Assembly-CSharp
+        m_MethodName: Accomplished
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &693500373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,7 +2652,7 @@ SpriteRenderer:
   m_Size: {x: 2.47, y: 2.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1198307426
@@ -2765,7 +2777,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1319565299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 434163890}
+        m_TargetAssemblyTypeName: WishHandler, Assembly-CSharp
+        m_MethodName: Immortality
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1319565299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2886,7 +2910,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1412647010}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 434163890}
+        m_TargetAssemblyTypeName: WishHandler, Assembly-CSharp
+        m_MethodName: MoreWishes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1412647010
 MonoBehaviour:
   m_ObjectHideFlags: 0
