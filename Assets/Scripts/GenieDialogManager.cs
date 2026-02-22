@@ -1,5 +1,8 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
+using UnityEngine.SceneManagement;
 
 public class GenieDialogManager : MonoBehaviour
 {
@@ -12,10 +15,14 @@ public class GenieDialogManager : MonoBehaviour
     public WishHandler wishHandler;
     public GameObject wishBox;
     public WishCarrier wishCarrier;
+    public GenieSystem genieSystem;
+    
 
     string[] messages;
     int messagesIndex = 0;
     bool isActive = false;
+    public bool playerSpeaking = false;
+    public bool resetTrigger = false;
 
     private bool EnsureWishCarrier()
     {
@@ -44,12 +51,31 @@ public class GenieDialogManager : MonoBehaviour
         messages = Message.Split('|');
         if ((messagesIndex < messages.Length) && (wishBox.active == false))
         {
-            
+
+            if(playerSpeaking == true)
+            {
+                Debug.Log("Showing player name");
+                nameText.text = "You";
+            }
+
+            if(resetTrigger == true)
+            {
+                Debug.Log("Showing Genie name");
+                nameText.text = "Genie";
+            }
+
             Debug.Log("printing next message part");
             DialogSystem.SetActive(true);
             isActive = true;
             text.text = messages[messagesIndex].Trim();
             messagesIndex++;
+
+            if (wishCarrier.returning == true && wishCarrier.askedWish3 == true && wishCarrier.readyToLeave == false)
+            {
+                Debug.Log("Setting up player name");
+                playerSpeaking = true; 
+            }
+
         }
         else
         {
@@ -57,12 +83,40 @@ public class GenieDialogManager : MonoBehaviour
             DialogSystem.SetActive(false);
             messagesIndex = 0;
             firstMessagePlayed = true;
-
-            if (!EnsureWishCarrier() || wishCarrier.readyToLeave == false)
+            if (wishCarrier.askedWish3 == true && wishCarrier.returning == true && wishCarrier.readyToLeave == false && resetTrigger == false) 
             {
-                wishBox.SetActive(true);
-                Debug.Log("turned on wishbox");
+                Debug.Log("Reached lesson text");
+                nameText.text = "Genie";
+                genieSystem.message = "You have learned... for that I will give you back what you had. | You are growing.";
+                resetTrigger = true;
+                wishCarrier.readyToLeave = true;
+
+            } 
+
+            if (wishCarrier.readyToLeave == false)
+            {
+                if (!wishCarrier.askedWish3)
+                {
+                    Debug.Log("havent asked for wish 3");
+                    wishBox.SetActive(true);
+                    Debug.Log("turned on wishbox");
+                    wishCarrier.readyToLeave = true;
+                }
             }
+
+            if (resetTrigger == true)
+            {
+                Invoke("MethodName", 6f); 
+
+                Destroy(wishCarrier);
+                SceneManager.LoadScene("SampleScene");//replace with scene wanted for the start
+            }
+            
+           
+
+
+
+
         }
 
     }
@@ -86,11 +140,7 @@ public class GenieDialogManager : MonoBehaviour
             messagesIndex = 0;
             isActive = false;
             firstMessagePlayed = true;
-            if (!EnsureWishCarrier() || wishCarrier.readyToLeave == false)
-            {
-                wishBox.SetActive(true);
-                Debug.Log("turned on wishbox");
-            }
+            
 
         }
     }
@@ -99,4 +149,15 @@ public class GenieDialogManager : MonoBehaviour
     {
         
     }
+
+    private void Start()
+    {
+        GameObject WishLog = GameObject.FindGameObjectWithTag("Log");
+        if (WishLog != null)
+        {
+            wishCarrier = WishLog.GetComponent<WishCarrier>(); // no type declaration!
+        }
+    }
+
+
 }
