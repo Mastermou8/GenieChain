@@ -831,43 +831,73 @@ MonoBehaviour:
   dialogManager: {fileID: 358995790}
   playerController: {fileID: 865685251}
   wishCarrier: {fileID: 0}
-  message: 'Hiiiii | How are you co-worker | I know you are always good | So u won''t
-    believe this but the other day i saw Shawn | Crazy right
+  message: '...Oh. | It''s you. | Did you need something or. | Actually don''t answer
+    that, I''m busy. | Well I''m not busy but I was thinking about being busy so
+    same thing.
 
 '
-  WorldPeace: 
-  Money: 
-  Relationships: 
-  Accomplished: 
+  WorldPeace: Mm. | Good for the world I guess. | Can you move? | You're blocking
+    the window. | I was looking at nothing but it was MY nothing.
+  Money: Hi. | Hello. | I feel like we never talk enough, like ever. | We should
+    fix that. | Actually you know what, let's just be together. | I've thought about
+    it for a long time. | Like since just now. | But still.
+  Relationships: You're taken? | ...Good for you. | Whatever. | I didn't ask. | I
+    wasn't going to ask. | I was going to ask something completely different actually.
+    | Forget it.
+  Accomplished: I heard your name going around. | Interesting. | Very interesting.
+    | So what are you doing later. | Not that I have plans I just want to know yours.
+    | For no reason.
   MoreWishes: 
   Immortality: 
   Nothing: 
-  WorldPeace_Money: 
-  WorldPeace_Relationships: 
-  WorldPeace_Accomplished: 
+  WorldPeace_Money: Everyone loves you and I just want to say | I loved you first.
+    | Recently but still first. | Right after the news segment actually. | Almost
+    during it. | I was very fast about it.
+  WorldPeace_Relationships: People like you now. | A lot of people. | And you're
+    with someone. | Cool. | That's cool. | Totally cool. | I'm cool about it. | Very
+    cool. | So cool.
+  WorldPeace_Accomplished: You're everywhere lately. | I saw you on two channels
+    last night. | I wasn't looking for you. | I just happened to see it. | Twice.
+    | Back to back. | I didn't change the channel fast enough. | Twice.
   WorldPeace_MoreWishes: 
   WorldPeace_Immortality: 
-  Money_Relationships: 
-  Money_Accomplished: 
+  Money_Relationships: ' Hi! | I saw you on the news again last night. | You looked
+    amazing. | We looked amazing. | I was in the background but still. | We''re a
+    great couple. | Everyone says so. | I bring it up actually. | Frequently.'
+  Money_Accomplished: There he is! | MY boyfriend. | The successful one. | I tell
+    everyone. | Strangers mostly. | The cashier at the grocery store knows your net
+    worth because of me. | She seemed impressed. | I made sure she seemed impressed.
   Money_MoreWishes: 
   Money_Immortality: 
-  Relationships_Accomplished: 
+  Relationships_Accomplished: Famous, rich, loved by all, AND taken by me. | I feel
+    like I won something. | Did I win something? | It feels like I won something.
+    | I should get a trophy. | A small one is fine. | Actually make it big.
   Relationships_MoreWishes: 
   Relationships_Immortality: 
   Accomplished_MoreWishes: 
   Accomplished_Immortality: 
   MoreWishes_Immortality: 
-  WorldPeace_Money_Relationships: 
-  WorldPeace_Money_Accomplished: 
+  WorldPeace_Money_Relationships: The whole world loves you and you chose ME specifically.
+    | Out of everyone. | I think about that a lot. | Like a normal amount. | Maybe
+    slightly above normal. | It's fine. | You're lucky honestly. | We're both lucky.
+    | Mostly you.
+  WorldPeace_Money_Accomplished: Famous, rich, loved by all, AND taken by me. | I
+    feel like I won something. | Did I win something? | It feels like I won something.
+    | I should get a trophy. | A small one is fine. | Actually make it big.
   WorldPeace_Money_MoreWishes: 
   WorldPeace_Money_Immortality: 
-  WorldPeace_Relationships_Accomplished: 
+  WorldPeace_Relationships_Accomplished: Everyone loves you, you have a career, AND
+    a partner. | Good. | Great. | Wonderful. | I have to go. | I don't have to go.
+    | I just need a second. | Give me a second.
   WorldPeace_Relationships_MoreWishes: 
   WorldPeace_Relationships_Immortality: 
   WorldPeace_Accomplished_MoreWishes: 
   WorldPeace_Accomplished_Immortality: 
   WorldPeace_MoreWishes_Immortality: 
-  Money_Relationships_Accomplished: 
+  Money_Relationships_Accomplished: Rich, successful, AND mine. | I did good didn't
+    I. | I really picked well. | I picked so well. | Everyone thinks so. | I asked
+    them. | Multiple people. | They all said yes. | I may have phrased the question
+    in a leading way but the answers were still yes.
   Money_Relationships_MoreWishes: 
   Money_Relationships_Immortality: 
   Money_Accomplished_MoreWishes: 
@@ -1522,40 +1552,58 @@ MonoBehaviour:
   dialogManager: {fileID: 358995790}
   playerController: {fileID: 865685251}
   wishCarrier: {fileID: 0}
-  message: Hey, | Name is Julio | ...
-  WorldPeace: 
-  Money: 
-  Relationships: 
-  Accomplished: 
+  message: Yeah, yeah, keep moving. | I've got enough people standing around doing
+    nothing already | ...
+  WorldPeace: Hm. | World's been weirdly calm lately. | Don't see what the big deal
+    is. | Get back to work.
+  Money: Oh. | Hey! | Didn't see you there buddy! | Looking good lately, really good.
+    | We should catch up sometime!
+  Relationships: You have a date tonight? | Yeah I'm gonna need you to stay late
+    actually. | Important stuff. | You understand. | Great.
+  Accomplished: I saw your name going around. | Not bad. | I mean I could've done
+    it better but... | Hey, lunch is on me today!
   MoreWishes: 
   Immortality: 
   Nothing: 
-  WorldPeace_Money: 
-  WorldPeace_Relationships: 
-  WorldPeace_Accomplished: 
+  WorldPeace_Money: Everyone's been talking about you! | Which is great, really great.
+    | Hey, can you introduce me to some of those people? | Just casually.
+  WorldPeace_Relationships: People really like you lately. | Your partner too I assume.
+    | Anyway I cancelled your Friday afternoon, we have a team thing. | You're welcome.
+  WorldPeace_Accomplished: Three news mentions last week? | Impressive. | You know
+    I gave you that opportunity originally right? | Just want that on record.
   WorldPeace_MoreWishes: 
   WorldPeace_Immortality: 
-  Money_Relationships: 
-  Money_Accomplished: 
+  Money_Relationships: Hey champ! | Quick thing, your partner called the office earlier.
+    | I told them you'd be home late. | You're welcome. | Big meeting tomorrow anyway.
+  Money_Accomplished: Listen, I was thinking. | You and me, we should partner up
+    on something. | I've always believed in you, you know that. | Since day one actually.
   Money_MoreWishes: 
   Money_Immortality: 
-  Relationships_Accomplished: 
+  Relationships_Accomplished: Promotion AND a partner? | Cute. | Hey, date night
+    might have to wait, I need those files by Friday. | She'll understand. | Probably.
   Relationships_MoreWishes: 
   Relationships_Immortality: 
   Accomplished_MoreWishes: 
   Accomplished_Immortality: 
   MoreWishes_Immortality: 
-  WorldPeace_Money_Relationships: 
-  WorldPeace_Money_Accomplished: 
+  WorldPeace_Money_Relationships: You're basically famous now! | I knew it! | I SAID
+    it! | Ask anyone! | Hey, your partner's great by the way, very patient. | Very.
+  WorldPeace_Money_Accomplished: People are calling YOU now? | That's... great. |
+    Really great. | Hey, remember when I gave you that feedback that one time? |
+    Shaped you, probably.
   WorldPeace_Money_MoreWishes: 
   WorldPeace_Money_Immortality: 
-  WorldPeace_Relationships_Accomplished: 
+  WorldPeace_Relationships_Accomplished: Everyone loves you, you're doing great,
+    AND someone chose you? | I mean I saw potential in you before any of this obviously.
+    | Obviously.
   WorldPeace_Relationships_MoreWishes: 
   WorldPeace_Relationships_Immortality: 
   WorldPeace_Accomplished_MoreWishes: 
   WorldPeace_Accomplished_Immortality: 
   WorldPeace_MoreWishes_Immortality: 
-  Money_Relationships_Accomplished: 
+  Money_Relationships_Accomplished: Wow. | Just wow. | Hey, I told my wife I know
+    you personally. | She didn't believe me. | Dinner at yours sometime? | Just an
+    idea.
   Money_Relationships_MoreWishes: 
   Money_Relationships_Immortality: 
   Money_Accomplished_MoreWishes: 
@@ -3737,39 +3785,52 @@ MonoBehaviour:
   playerController: {fileID: 865685251}
   wishCarrier: {fileID: 0}
   message: 'Hellooooo | Im roxy '
-  WorldPeace: Life is beautiful
-  Money: 
-  Relationships: 
-  Accomplished: 
-  MoreWishes: 
-  Immortality: 
-  Nothing: 
-  WorldPeace_Money: 
-  WorldPeace_Relationships: 
-  WorldPeace_Accomplished: 
-  WorldPeace_MoreWishes: 
-  WorldPeace_Immortality: 
-  Money_Relationships: 
-  Money_Accomplished: 
-  Money_MoreWishes: 
-  Money_Immortality: 
-  Relationships_Accomplished: 
+  WorldPeace: '  Isn''t it a wonderful day to be alive? | Now we can all enjoy life
+    and have some tea'
+  Money: '  Hey! | Nice suit, did you get a promotion?'
+  Relationships: "  Hello Handsome | Don\u2019t forget about our picnic date later
+    tonight<3"
+  Accomplished: '  That''s a nice-looking medal right there!'
+  MoreWishes: ...
+  Immortality: '  You look just like you looked yesterday!'
+  Nothing: ...
+  WorldPeace_Money: '  A pleasure to see you, Sr. | Hope I''m not in your way | just
+    picking up some flowers'
+  WorldPeace_Relationships: '  Look at you, dear. You finally did it!!'
+  WorldPeace_Accomplished: '  Hello Mr... | I saw you the other day on the news |
+    Its great to have someone as good as you'
+  WorldPeace_MoreWishes: Isn't it a wonderful day to be alive? | Now we can all enjoy
+    life and have some tea
+  WorldPeace_Immortality: "To love someone and outlast them\u2026 | Hold them close.
+    Every single day."
+  Money_Relationships: You missed our tea date | have you been busy? :(
+  Money_Accomplished: 'I see you changed.. | just dont let the gold drown the person
+    i used know '
+  Money_MoreWishes: Never seen someone that successful | I wonder what you got hidden
+  Money_Immortality: The flowers i got are dying | I guess it's just part of the
+    beauty of life
+  Relationships_Accomplished: 'You are doing a great work | Il be here cheering you
+    on my love '
   Relationships_MoreWishes: 
-  Relationships_Immortality: 
+  Relationships_Immortality: No matter what | ill always be by your side
   Accomplished_MoreWishes: 
-  Accomplished_Immortality: 
+  Accomplished_Immortality: That's a nice-looking medal right there!
   MoreWishes_Immortality: 
-  WorldPeace_Money_Relationships: 
-  WorldPeace_Money_Accomplished: 
+  WorldPeace_Money_Relationships: Look at you, dear. You finally did it!! | ...You
+    do still know my name, right? | Haha... mostly joking!
+  WorldPeace_Money_Accomplished: You look just like you looked yesterday! | Funny
+    how some things never change! | Good funny, I mean
   WorldPeace_Money_MoreWishes: 
   WorldPeace_Money_Immortality: 
-  WorldPeace_Relationships_Accomplished: 
+  WorldPeace_Relationships_Accomplished: 'You''re everybody''s favorite person lately!
+    | Mine too! | Don''t let it go to your head! '
   WorldPeace_Relationships_MoreWishes: 
   WorldPeace_Relationships_Immortality: 
   WorldPeace_Accomplished_MoreWishes: 
   WorldPeace_Accomplished_Immortality: 
   WorldPeace_MoreWishes_Immortality: 
-  Money_Relationships_Accomplished: 
+  Money_Relationships_Accomplished: Look at you, dear. You finally did it!! | ...You
+    do still know my name, right? | Haha... mostly joking!
   Money_Relationships_MoreWishes: 
   Money_Relationships_Immortality: 
   Money_Accomplished_MoreWishes: 
@@ -6462,39 +6523,54 @@ MonoBehaviour:
   playerController: {fileID: 865685251}
   wishCarrier: {fileID: 0}
   message: Hi, im bill | Are you new around here
-  WorldPeace: 
-  Money: 
-  Relationships: 
-  Accomplished: 
+  WorldPeace: I was watching the news this morning and apparently tension rates are
+    at an all time low! | Fascinating stuff really. | I made a chart about it.
+  Money: Hey, I saw you on the news last night! | Listen, we should totally grab
+    lunch sometime! | I've always liked you, you know that right?
+  Relationships: Oh you seem... happy lately. | Good for you I guess. | Anyway did
+    you fill out the Q3 report yet?
+  Accomplished: Oh wow, page 47 of the industry report! | Hey, you think you could
+    put in a good word for me upstairs? | We're basically best friends at this point!
   MoreWishes: 
   Immortality: 
   Nothing: 
-  WorldPeace_Money: 
-  WorldPeace_Relationships: 
-  WorldPeace_Accomplished: 
+  WorldPeace_Money: Everyone's been saying great things about you lately! | I've
+    always said it too, just so you know. | Always. | Ask anyone.
+  WorldPeace_Relationships: ' I ran a quick survey. | Statistically you''re the most
+    liked person in the building. | I''m number 111! | out of 112...'
+  WorldPeace_Accomplished: I saw you on THREE separate news channels last night.
+    | THREE. | I have them recorded if you want to watch. | I made popcorn.
   WorldPeace_MoreWishes: 
   WorldPeace_Immortality: 
-  Money_Relationships: 
-  Money_Accomplished: 
+  Money_Relationships: You were on the news AND you've got a partner now? | Living
+    the dream man. | Meanwhile I'm still eating sad desk salads alone. | Ha. | Ha.
+  Money_Accomplished: Okay so I may have made a spreadsheet tracking your career
+    trajectory. | It's color coded. | Blue is impressive. | It's very blue.
   Money_MoreWishes: 
   Money_Immortality: 
-  Relationships_Accomplished: 
+  Relationships_Accomplished: You got the promotion AND someone who puts up with
+    you? | Strange
   Relationships_MoreWishes: 
   Relationships_Immortality: 
   Accomplished_MoreWishes: 
   Accomplished_Immortality: 
   MoreWishes_Immortality: 
-  WorldPeace_Money_Relationships: 
-  WorldPeace_Money_Accomplished: 
+  WorldPeace_Money_Relationships: The whole world loves you AND you're doing great
+    financially AND you have a partner?! | I need to study you. | Scientifically.
+    | For research.
+  WorldPeace_Money_Accomplished: You're basically a case study at this point. | I
+    emailed my old professor about you. | He said it sounds fake.
   WorldPeace_Money_MoreWishes: 
   WorldPeace_Money_Immortality: 
-  WorldPeace_Relationships_Accomplished: 
+  WorldPeace_Relationships_Accomplished: "  Everyone loves you | yet they don\u2019t
+    seem to know you  | Wild. | Genuinely wild. | I'm taking notes."
   WorldPeace_Relationships_MoreWishes: 
   WorldPeace_Relationships_Immortality: 
   WorldPeace_Accomplished_MoreWishes: 
   WorldPeace_Accomplished_Immortality: 
   WorldPeace_MoreWishes_Immortality: 
-  Money_Relationships_Accomplished: 
+  Money_Relationships_Accomplished: Rich, respected, and someone actually likes you.
+    | I've modeled this scenario in Excel before. | Didn't think it was real. | Huh.
   Money_Relationships_MoreWishes: 
   Money_Relationships_Immortality: 
   Money_Accomplished_MoreWishes: 
