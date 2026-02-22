@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -2071717904496075581, guid: 8f3b5f1a10b9bad40ad43c42202f618c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1105,6 +1105,7 @@ MonoBehaviour:
   wish3: 
   animator: {fileID: 865685256}
   spriteRenderer: {fileID: 865685252}
+  style: 0
 --- !u!212 &865685252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1403,7 +1404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1211272561
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1973,8 +1974,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9b76c79563c3a274aa48b0dbdf009693, type: 3}
-  m_Color: {r: 0.24417052, g: 0.5566038, b: 0.36320677, a: 1}
+  m_Sprite: {fileID: -8088668826237250594, guid: 6443d0f5832236145852da5953d643dc, type: 3}
+  m_Color: {r: 1, g: 0.90196085, b: 0.48235297, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
