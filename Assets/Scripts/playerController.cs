@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
     public string wish1;
     public string wish2;
     public string wish3;
-    
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,9 +26,22 @@ public class PlayerController : MonoBehaviour
     
     }
 
+    private void flipSprite()
+    {
+        if (moveInput.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (moveInput.x > 0)
+        {   
+            spriteRenderer.flipX = false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
+        flipSprite();
         //Collect input
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
@@ -44,6 +58,15 @@ public class PlayerController : MonoBehaviour
         velDiff = targetVel - playerRb.linearVelocity;
         playerRb.AddForce((velDiff/2) * accel, ForceMode2D.Force);
 
+        if (moveInput != Vector2.zero)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+       
         /* for reference from last project:
         previousVelocity = rb.linearVelocity;
         rb.linearVelocity = ((((direction * movementSpeed)) + previousVelocity) / 2);
