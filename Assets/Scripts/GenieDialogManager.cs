@@ -106,6 +106,8 @@ public class GenieDialogManager : MonoBehaviour
 
             if (resetTrigger == true)
             {
+                Invoke("MethodName", 6f); 
+
                 Destroy(wishCarrier);
                 SceneManager.LoadScene("SampleScene");//replace with scene wanted for the start
             }
@@ -156,4 +158,6 @@ public class GenieDialogManager : MonoBehaviour
             wishCarrier = WishLog.GetComponent<WishCarrier>(); // no type declaration!
         }
     }
+
+
 }
