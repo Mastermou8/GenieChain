@@ -29,6 +29,7 @@ public class ExitScript : MonoBehaviour
         {
             Debug.Log("detected player");
             wishCarrier.readyToLeave = false;
+            wishCarrier.returning = true;
             SceneManager.LoadScene("CityScene");
         }
     }

@@ -3154,28 +3154,28 @@ MonoBehaviour:
   dialogManager: {fileID: 272673473}
   playerController: {fileID: 1920721597}
   message: Hello, how are you? | I am a cute NPC named Dawson.
-  WorldPeace: 
-  Money: 
-  Relationships: 
-  Accomplished: 
-  MoreWishes: 
-  Immortality: 
-  Nothing: 
-  WorldPeace_Money: 
-  WorldPeace_Relationships: 
-  WorldPeace_Accomplished: 
-  WorldPeace_MoreWishes: 
-  WorldPeace_Immortality: 
-  Money_Relationships: 
-  Money_Accomplished: 
-  Money_MoreWishes: 
-  Money_Immortality: 
-  Relationships_Accomplished: 
-  Relationships_MoreWishes: 
-  Relationships_Immortality: 
-  Accomplished_MoreWishes: 
-  Accomplished_Immortality: 
-  MoreWishes_Immortality: 
+  WorldPeace: Back again? What's your next wish?
+  Money: Back again? What's your next wish?
+  Relationships: Back again? What's your next wish?
+  Accomplished: Back again? What's your next wish?
+  MoreWishes: Back again? What's your next wish?
+  Immortality: Back again? What's your next wish?
+  Nothing: What?! | Surely you want something. | Tell me, what do you wish for?
+  WorldPeace_Money: Back again? What's your next wish?
+  WorldPeace_Relationships: Back again? What's your next wish?
+  WorldPeace_Accomplished: Back again? What's your next wish?
+  WorldPeace_MoreWishes: Back again? What's your next wish?
+  WorldPeace_Immortality: Back again? What's your next wish?
+  Money_Relationships: Back again? What's your next wish?
+  Money_Accomplished: Back again? What's your next wish?
+  Money_MoreWishes: Back again? What's your next wish?
+  Money_Immortality: Back again? What's your next wish?
+  Relationships_Accomplished: Back again? What's your next wish?
+  Relationships_MoreWishes: Back again? What's your next wish?
+  Relationships_Immortality: Back again? What's your next wish?
+  Accomplished_MoreWishes: Back again? What's your next wish?
+  Accomplished_Immortality: Back again? What's your next wish?
+  MoreWishes_Immortality: Back again? What's your next wish?
   WorldPeace_Money_Relationships: 
   WorldPeace_Money_Accomplished: 
   WorldPeace_Money_MoreWishes: 
