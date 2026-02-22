@@ -144,6 +144,7 @@ public class GenieSystem : MonoBehaviour
 
             Debug.Log("E pressed while in range");
             dialogManager.nameText.text = npcName;
+            playerController.allowMovement = false;
 
             string dialogueKey = GetDialogueKey();
             string dialogue = GetDialogue(dialogueKey);
