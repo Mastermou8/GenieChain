@@ -8,7 +8,9 @@ public class GenieSystem : MonoBehaviour
     [SerializeField] private GeniePlayerController playerController;
     [SerializeField] private WishHandler wishHandler;
     [TextArea]
+
     [SerializeField] public string message = "Hello, I am a magical Genie! | I will give you three wishes! | Please, tell me what you wish.";
+    [SerializeField] public string message2 = "You have learned. | For that I will give you back what you had.";
 
     [Header("Individual Wishes")]
     [SerializeField] private string WorldPeace;
@@ -99,6 +101,8 @@ public class GenieSystem : MonoBehaviour
         }
         EnsureWishCarrier();
         InitializeDialogueMap();
+
+        dialogManager.nameText.text = npcName;
     }
 
     void InitializeDialogueMap()
@@ -176,13 +180,21 @@ public class GenieSystem : MonoBehaviour
             }
 
             Debug.Log("E pressed while in range");
-            dialogManager.nameText.text = npcName;
+            
             playerController.allowMovement = false;
 
             string dialogueKey = GetDialogueKey();
             string dialogue = GetDialogue(dialogueKey);
 
-            if (wishCarrier.readyToLeave == true)
+
+            if (wishCarrier.returning == true && wishCarrier.askedWish3 == true)
+            {
+
+                dialogManager.ShowMessage(message2);
+            }
+            
+
+            if (wishCarrier.readyToLeave == true && wishCarrier.askedWish3 == false)
             {
                 message = "Go, enjoy your wish | Come back later for your next.";
                 dialogManager.ShowMessage(message);
@@ -277,4 +289,6 @@ public class GenieSystem : MonoBehaviour
             playerDetection = false;
         }
     }
+
+
 }

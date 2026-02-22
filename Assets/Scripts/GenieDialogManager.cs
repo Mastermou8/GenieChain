@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal.Internal;
+using UnityEngine.SceneManagement;
 
 public class GenieDialogManager : MonoBehaviour
 {
@@ -82,27 +83,38 @@ public class GenieDialogManager : MonoBehaviour
             DialogSystem.SetActive(false);
             messagesIndex = 0;
             firstMessagePlayed = true;
+            if (wishCarrier.askedWish3 == true && wishCarrier.returning == true && wishCarrier.readyToLeave == false && resetTrigger == false) 
+            {
+                Debug.Log("Reached lesson text");
+                nameText.text = "Genie";
+                genieSystem.message = "You have learned... for that I will give you back what you had. | You are growing.";
+                resetTrigger = true;
+                wishCarrier.readyToLeave = true;
 
-            if (!EnsureWishCarrier() || wishCarrier.readyToLeave == false)
+            } 
+
+            if (wishCarrier.readyToLeave == false)
             {
                 if (!wishCarrier.askedWish3)
                 {
+                    Debug.Log("havent asked for wish 3");
                     wishBox.SetActive(true);
                     Debug.Log("turned on wishbox");
                     wishCarrier.readyToLeave = true;
                 }
-                else
-                {
-                    Debug.Log("third wish made, finding if need to trigger");
-                    if(resetTrigger == false && wishCarrier.returning == true)
-                    {
-                        Debug.Log("Reached lesson text");
-                        genieSystem.message = "You have learned... for that I will give you back what you had. | You are growing.";
-                        resetTrigger = true;
-                        wishCarrier.readyToLeave = true;
-                    }
-                }
             }
+
+            if (resetTrigger == true)
+            {
+                Destroy(wishCarrier);
+                SceneManager.LoadScene("SampleScene");//replace with scene wanted for the start
+            }
+            
+           
+
+
+
+
         }
 
     }
@@ -126,11 +138,7 @@ public class GenieDialogManager : MonoBehaviour
             messagesIndex = 0;
             isActive = false;
             firstMessagePlayed = true;
-            if (!EnsureWishCarrier() || wishCarrier.readyToLeave == false)
-            {
-                wishBox.SetActive(true);
-                Debug.Log("turned on wishbox");
-            }
+            
 
         }
     }
@@ -142,10 +150,10 @@ public class GenieDialogManager : MonoBehaviour
 
     private void Start()
     {
-        GameObject targetObject = GameObject.FindGameObjectWithTag("Log");
-        if(targetObject != null)
+        GameObject WishLog = GameObject.FindGameObjectWithTag("Log");
+        if (WishLog != null)
         {
-            WishCarrier wishCarrier = targetObject.GetComponent<WishCarrier>();
+            wishCarrier = WishLog.GetComponent<WishCarrier>(); // no type declaration!
         }
     }
 }
