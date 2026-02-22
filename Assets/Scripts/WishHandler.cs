@@ -16,6 +16,7 @@ public class WishHandler : MonoBehaviour
 
     private bool EnsureWishCarrier()
     {
+        //dawson i s gat
         if (wishCarrier == null)
         {
             wishCarrier = WishCarrier.Instance;
