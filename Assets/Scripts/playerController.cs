@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private int style;
 
+    [SerializeField] private WishCarrier wishCarrier;
+
     
  
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -45,6 +47,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (wishCarrier == null)
+        {
+            wishCarrier = FindObjectOfType<WishCarrier>();
+        }
+
+        wish1 = wishCarrier.wish1;
+        wish2 = wishCarrier.wish2;
+        wish3 = wishCarrier.wish3;
+
         flipSprite();
         //Collect input
         moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -71,7 +82,22 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isRunning", false);
         }
 
-
+        if (wishCarrier.money == true && wishCarrier.worldpeace == true )
+         {
+             style = 3;
+         }
+         else if (wishCarrier.money == true)
+         {
+             style = 1;
+         }
+         else if (wishCarrier.worldpeace == true)
+         {
+             style = 2;
+         }
+         else
+         {
+             style = 0;
+         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             style = (style + 1) % 4 ;

@@ -5,6 +5,7 @@ public class GenieSystem : MonoBehaviour
 {
     [SerializeField] private GenieDialogManager dialogManager;
     [SerializeField] private GeniePlayerController playerController;
+    [SerializeField] private WishHandler wishHandler;
     [TextArea]
     [SerializeField] private string message = "Hello, how are you? | I am a cute NPC named Dawson.";
 
@@ -75,6 +76,10 @@ public class GenieSystem : MonoBehaviour
         if (playerController == null)
         {
             playerController = FindObjectOfType<GeniePlayerController>();
+        }
+        if (wishHandler == null)
+        {
+            wishHandler = FindObjectOfType<WishHandler>();
         }
         InitializeDialogueMap();
     }

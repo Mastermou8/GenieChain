@@ -32,5 +32,7 @@ public class ExitScript : MonoBehaviour
             wishCarrier.returning = true;
             SceneManager.LoadScene("CityScene");
         }
+
+       
     }
 }

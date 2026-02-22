@@ -8,6 +8,7 @@ public class NPCSystem : MonoBehaviour
 
     [SerializeField] private DialogManager dialogManager;
     [SerializeField] private PlayerController playerController;
+    [SerializeField] private WishCarrier wishCarrier;
     [TextArea]
     [SerializeField] private string message = "Hello, how are you? | I am a cute NPC named Dawson.";
     
@@ -136,7 +137,10 @@ public class NPCSystem : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+
     {
+
+        
         if (playerDetection && Input.GetKeyDown(KeyCode.E))
         {
             if (dialogManager == null)
@@ -164,23 +168,23 @@ public class NPCSystem : MonoBehaviour
 
     string GetDialogueKey()
     {
-        if (playerController.wish3 != null)
+        List<string> wishes = new List<string>
         {
-            string[] wishes = { playerController.wish1, playerController.wish2, playerController.wish3 };
-            System.Array.Sort(wishes);
-            return $"{wishes[0]}|{wishes[1]}|{wishes[2]}";
+            playerController.wish1,
+            playerController.wish2,
+            playerController.wish3
         }
-        else if (playerController.wish2 != null)
+        .Where(wish => !string.IsNullOrWhiteSpace(wish))
+        .Select(wish => wish.Trim())
+        .ToList();
+
+        if (wishes.Count == 0)
         {
-            string[] wishes = { playerController.wish1, playerController.wish2 };
-            System.Array.Sort(wishes);
-            return $"{wishes[0]}|{wishes[1]}";
+            return null;
         }
-        else if (playerController.wish1 != null)
-        {
-            return playerController.wish1;
-        }
-        return null;
+
+        wishes.Sort();
+        return string.Join("|", wishes);
     }
 
     string GetDialogue(string key)
