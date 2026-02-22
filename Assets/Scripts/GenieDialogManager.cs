@@ -7,6 +7,11 @@ public class GenieDialogManager : MonoBehaviour
     public TMP_Text text;
     public TMP_Text nameText;
     public GameObject DialogSystem;
+    public bool firstMessagePlayed = false;
+    public bool releasePlayer = true;
+    public WishHandler wishHandler;
+    public GameObject wishBox;
+    public WishCarrier wishCarrier;
 
     string[] messages;
     int messagesIndex = 0;
@@ -14,13 +19,30 @@ public class GenieDialogManager : MonoBehaviour
     // Update is called once per frame
     public void ShowMessage(string Message)
     {
-        messages = Message.Split('|');
-        DialogSystem.SetActive(true);
-        messagesIndex = 0;
-        isActive = true;
-        text.text = messages[messagesIndex].Trim();
-        messagesIndex = 1;
 
+        messages = Message.Split('|');
+        if ((messagesIndex < messages.Length) && (wishBox.active == false))
+        {
+            
+            Debug.Log("printing next message part");
+            DialogSystem.SetActive(true);
+            isActive = true;
+            text.text = messages[messagesIndex].Trim();
+            messagesIndex++;
+        }
+        else
+        {
+            Debug.Log("End of message");
+            DialogSystem.SetActive(false);
+            messagesIndex = 0;
+            firstMessagePlayed = true;
+           
+            if (wishCarrier.readyToLeave == false)
+            {
+                wishBox.SetActive(true);
+                Debug.Log("turned on wishbox");
+            }
+        }
 
     }
 
@@ -42,6 +64,18 @@ public class GenieDialogManager : MonoBehaviour
             DialogSystem.SetActive(false);
             messagesIndex = 0;
             isActive = false;
+            firstMessagePlayed = true;
+            if (wishCarrier.readyToLeave == false)
+            {
+                wishBox.SetActive(true);
+                Debug.Log("turned on wishbox");
+            }
+
         }
+    }
+
+    private void Update()
+    {
+        
     }
 }

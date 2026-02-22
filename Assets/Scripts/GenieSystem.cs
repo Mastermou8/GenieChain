@@ -63,6 +63,7 @@ public class GenieSystem : MonoBehaviour
 
     public GameObject InteractionPrompt;
     public string npcName;
+    public WishCarrier wishCarrier;
 
     void Awake()
     {
@@ -134,6 +135,14 @@ public class GenieSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(wishCarrier.readyToLeave == true)
+        {
+            message = "Go, enjoy your wish | Come back later for your next.";
+        }
+
+
+
         if (playerDetection && Input.GetKeyDown(KeyCode.E))
         {
             if (dialogManager == null)
@@ -151,32 +160,57 @@ public class GenieSystem : MonoBehaviour
 
             if (dialogue != null)
             {
-                dialogManager.ShowMessage(dialogue);
+
+                Debug.Log("Detected there is a diologue");
+                if(wishCarrier.returning == true)
+                {
+                    dialogManager.releasePlayer = false;
+                    dialogManager.ShowMessage(dialogue);
+
+                    //stops character while talking
+                    playerController.currentVel.x = 0;
+                    playerController.currentVel.y = 0;
+                }
             }
             else
             {
+                dialogManager.releasePlayer = false;
                 dialogManager.ShowMessage(message);
+
+                //stops character while talking
+                playerController.currentVel.x = 0;
+                playerController.currentVel.y = 0;
             }
         }
+
+
+
+        if ((dialogManager.releasePlayer == true) && (playerController.allowMovement == false))
+        {
+            playerController.allowMovement = true;
+        }
+
+
+        
     }
 
     string GetDialogueKey()
     {
-        if (playerController.wish3 != null)
+        if (!string.IsNullOrEmpty(wishCarrier.wish3))
         {
-            string[] wishes = {playerController.wish1, playerController.wish2, playerController.wish3 };
+            string[] wishes = { wishCarrier.wish1, wishCarrier.wish2, wishCarrier.wish3 };
             System.Array.Sort(wishes);
             return $"{wishes[0]}|{wishes[1]}|{wishes[2]}";
         }
-        else if (playerController.wish2 != null)
+        else if (!string.IsNullOrEmpty(wishCarrier.wish2))
         {
-            string[] wishes = { playerController.wish1, playerController.wish2 };
+            string[] wishes = { wishCarrier.wish1, wishCarrier.wish2 };
             System.Array.Sort(wishes);
             return $"{wishes[0]}|{wishes[1]}";
         }
-        else if (playerController.wish1 != null)
+        else if (!string.IsNullOrEmpty(wishCarrier.wish1))
         {
-            return playerController.wish1;
+            return wishCarrier.wish1;
         }
         return null;
     }
