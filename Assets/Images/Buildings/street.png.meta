@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 58c7ebe994648a9418bf096d88cc99ce
+guid: 98157979d1969c04c8b35dd0f29cc6eb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6957916204275261290
-    second: genie_0
+      213: 4777861783574383369
+    second: street_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: genie_0
+      name: street_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 54
-        width: 247
-        height: 295
+        y: 0
+        width: 512
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a6fd2c45ceb7f8060800000000000000
-      internalID: 6957916204275261290
+      spriteID: 90b8ddb5aff5e4240800000000000000
+      internalID: 4777861783574383369
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      genie_0: 6957916204275261290
+      street_0: 4777861783574383369
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

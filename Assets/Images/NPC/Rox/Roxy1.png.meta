@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d811f421356093548b72abdf7868729b
+guid: 90141986108d34b40926d994a2e20d50
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2078061778548659525
-    second: backBuilding_0
+      213: -2328638770854814918
+    second: Roxy1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backBuilding_0
+      name: Roxy1_0
       rect:
         serializedVersion: 2
-        x: 29
+        x: 19
         y: 0
-        width: 480
-        height: 128
+        width: 26
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54595b37d22c6dc10800000000000000
-      internalID: 2078061778548659525
+      spriteID: a3b1ff420630fafd0800000000000000
+      internalID: -2328638770854814918
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      backBuilding_0: 2078061778548659525
+      Roxy1_0: -2328638770854814918
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
